@@ -1,0 +1,488 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background: #f5f5f5;
+        }
+
+        .halaman {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-image: linear-gradient(to bottom, #d4af37, #f4d03f, #d4af37) 1;
+        }
+
+        .halaman:last-of-type {
+            border-bottom: none;
+        }
+
+        .halaman::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent);
+        }
+
+        .halaman:last-of-type::after {
+            display: none;
+        }
+
+        .halaman::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, #d4af37, #f4d03f, #d4af37);
+        }
+
+        .halaman-1 {
+            background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+        }
+
+        .ornamen-emas {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .lingkaran-dekor {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.06;
+        }
+
+        .lingkaran-1 {
+            width: 300px;
+            height: 300px;
+            background: #d4af37;
+            top: -100px;
+            left: -100px;
+        }
+
+        .lingkaran-2 {
+            width: 200px;
+            height: 200px;
+            background: #d4af37;
+            bottom: 50px;
+            right: -50px;
+        }
+
+        .simpan-tanggal {
+            text-align: left;
+            margin-bottom: 40px;
+            font-size: 20px;
+            line-height: 1.6;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #333;
+        }
+
+        .nama-pengantin {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .gambar-nama {
+            max-width: 280px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .simbol-dan {
+            font-size: 28px;
+            color: #888;
+            margin: 20px 0;
+            font-weight: 300;
+        }
+
+        .info-tamu {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .nama-tamu {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .teks-maaf {
+            font-size: 11px;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .halaman-2 {
+            background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
+        }
+
+        .ornamen-hijau {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .judul-undangan {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: #444;
+        }
+
+        .subjudul-undangan {
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            color: #333;
+        }
+
+        .ilustrasi-pasangan {
+            width: 220px;
+            height: 220px;
+            margin: 30px 0;
+            border: 3px solid #d4af37;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .judul-scan {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+            letter-spacing: 2px;
+            color: #333;
+        }
+
+        .kode-qr {
+            width: 160px;
+            height: 160px;
+            border: 3px solid #000000;
+            margin: 20px 0;
+            object-fit: contain;
+            padding: 5px;
+            background: white;
+        }
+
+        .dekorasi-daun {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 180px;
+            height: 180px;
+            opacity: 0.7;
+        }
+
+        .aksen-diagonal {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, transparent 50%, #5a8a3a 50%, #4a7c3a);
+            z-index: 1;
+        }
+
+        .titik-dekor {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            opacity: 0.3;
+        }
+
+        .titik {
+            width: 8px;
+            height: 8px;
+            background: #5a8a3a;
+            border-radius: 50%;
+            margin: 15px 0;
+        }
+
+        .halaman-3 {
+            background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+        }
+
+        .bunga-pojok-atas {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            opacity: 0.15;
+        }
+
+        .bunga-pojok-bawah {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            opacity: 0.15;
+            transform: rotate(180deg);
+        }
+
+        .salam {
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .ayat-suci {
+            font-size: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 320px;
+            font-weight: 300;
+            color: #555;
+        }
+
+        .gambar-nama-detail {
+            max-width: 300px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .info-orangtua {
+            font-size: 13px;
+            margin: 10px 0 40px 0;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .detail-acara {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+            gap: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .bagian-tanggal {
+            text-align: center;
+            border-right: 2px solid #d4af37;
+            padding-right: 40px;
+        }
+
+        .label-hari {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #333;
+        }
+
+        .angka-tanggal {
+            font-size: 72px;
+            font-weight: 700;
+            margin: 10px 0;
+            color: #d4af37;
+        }
+
+        .bulan-tahun {
+            font-size: 14px;
+            font-weight: 400;
+            color: #555;
+        }
+
+        .bagian-tempat {
+            text-align: left;
+        }
+
+        .nama-tempat {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #333;
+        }
+
+        .alamat {
+            font-size: 12px;
+            margin-top: 30px;
+            line-height: 1.8;
+            max-width: 320px;
+            text-align: center;
+            font-weight: 400;
+            color: #555;
+        }
+
+        .teks-doa {
+            font-size: 12px;
+            margin: 30px 0;
+            font-style: italic;
+            font-weight: 300;
+            text-align: center;
+            color: #555;
+        }
+
+        .hormat {
+            font-size: 13px;
+            margin-top: 30px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .nama-keluarga {
+            font-size: 11px;
+            margin-top: 10px;
+            line-height: 1.8;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .indikator-scroll {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: melambung 2s infinite;
+            font-size: 32px;
+            color: #d4af37;
+            cursor: pointer;
+            z-index: 100;
+            transition: opacity 0.3s;
+        }
+
+        @keyframes melambung {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .halaman {
+                border-left-width: 2px;
+                border-right-width: 2px;
+            }
+            .ornamen-emas {
+                width: 120px;
+                height: 120px;
+                top: 10px;
+                right: 10px;
+            }
+            .ornamen-hijau {
+                width: 70px;
+                height: 70px;
+                top: 15px;
+                right: 15px;
+            }
+            .gambar-nama {
+                max-width: 200px;
+            }
+            .gambar-nama-detail {
+                max-width: 220px;
+            }
+            .angka-tanggal {
+                font-size: 52px;
+            }
+            .detail-acara {
+                gap: 20px;
+                padding: 20px 15px;
+            }
+            .bagian-tanggal {
+                padding-right: 20px;
+            }
+            .lingkaran-1 {
+                width: 180px;
+                height: 180px;
+            }
+            .lingkaran-2 {
+                width: 150px;
+                height: 150px;
+            }
+            .dekorasi-daun {
+                width: 140px;
+                height: 140px;
+            }
+            .aksen-diagonal {
+                width: 180px;
+                height: 180px;
+            }
+            .ilustrasi-pasangan {
+                width: 180px;
+                height: 180px;
+            }
+            .kode-qr {
+                width: 140px;
+                height: 140px;
+            }
+            .simpan-tanggal {
+                font-size: 18px;
+            }
+            .nama-tempat {
+                font-size: 20px;
+            }
+            .bunga-pojok-atas,
+            .bunga-pojok-bawah {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .gambar-nama {
+                max-width: 260px;
+            }
+            .gambar-nama-detail {
+                max-width: 280px;
+            }
+            .detail-acara {
+                gap: 35px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .halaman {
+                padding: 60px 40px;
+            }
+            .gambar-nama {
+                max-width: 320px;
+            }
+            .gambar-nama-detail {
+                max-width: 340px;
+            }
+        }
